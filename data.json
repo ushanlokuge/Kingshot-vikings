@@ -1,0 +1,16 @@
+[
+  {
+    "Player": "Timmy",
+    "Squad": "A",
+    "Reinforce Target": "Janaka",
+    "Hero": "Hero1",
+    "Troops": "120000"
+  },
+  {
+    "Player": "Janaka",
+    "Squad": "A",
+    "Reinforce Target": "Timmy",
+    "Hero": "Hero2",
+    "Troops": "115000"
+  }
+]
