@@ -32,23 +32,22 @@
 <div id="output" class="card"></div>
 
 <script>
+
 const sheetURL = "data.json";
 
 let data = [];
 
 fetch(sheetURL)
   .then(res => res.json())
-  .then(sheetData => {
-    data = sheetData;
-
-    const players = [...new Set(data.map(r => r.Player))];
+  .then(json => {
+    data = json.players;
 
     const select = document.getElementById("playerSelect");
 
-    players.forEach(p => {
+    data.forEach(p => {
       const option = document.createElement("option");
-      option.value = p;
-      option.textContent = p;
+      option.value = p.name;
+      option.textContent = p.name;
       select.appendChild(option);
     });
 
@@ -58,18 +57,23 @@ fetch(sheetURL)
   });
 
 function showPlayer() {
-  const player = document.getElementById("playerSelect").value;
+  const playerName = document.getElementById("playerSelect").value;
 
-  const record = data.find(r => r.Player === player);
+  const player = data.find(p => p.name === playerName);
 
-  document.getElementById("output").innerHTML = `
-    <h2>${player}</h2>
-    <p><strong>Squad:</strong> ${record.Squad}</p>
-    <p><strong>Reinforce:</strong> ${record["Reinforce Target"]}</p>
-    <p><strong>Hero:</strong> ${record.Hero}</p>
-    <p><strong>Troops:</strong> ${record.Troops}</p>
-  `;
+  let html = `<h2>${player.name} 🛡️</h2>`;
+
+  player.assignments.forEach(a => {
+    html += `
+      <p>
+        <strong>${a.hero}</strong> ➝ ${a.target}
+      </p>
+    `;
+  });
+
+  document.getElementById("output").innerHTML = html;
 }
+
 </script>
 
 </body>
