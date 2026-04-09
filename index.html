@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Kingshot Viking Planner</title>
+  <style>
+    body {
+      font-family: Arial;
+      background: #111;
+      color: #fff;
+      text-align: center;
+      padding: 20px;
+    }
+    select {
+      padding: 10px;
+      font-size: 16px;
+    }
+    .card {
+      margin-top: 20px;
+      padding: 20px;
+      background: #222;
+      border-radius: 10px;
+    }
+  </style>
+</head>
+
+<body>
+
+<h1>⚔️ Viking War Dashboard ⚔️</h1>
+
+<select id="playerSelect"></select>
+
+<div id="output" class="card"></div>
+
+<script>
+const sheetURL = "https://opensheet.elk.sh/1kujwosgm4hbcZpXaaywEDQRo5LgGXPlHZJTyRh3TX4o/Sheet1";
+
+let data = [];
+
+fetch(sheetURL)
+  .then(res => res.json())
+  .then(sheetData => {
+    data = sheetData;
+
+    const players = [...new Set(data.map(r => r.Player))];
+
+    const select = document.getElementById("playerSelect");
+
+    players.forEach(p => {
+      const option = document.createElement("option");
+      option.value = p;
+      option.textContent = p;
+      select.appendChild(option);
+    });
+
+    select.addEventListener("change", showPlayer);
+
+    showPlayer();
+  });
+
+function showPlayer() {
+  const player = document.getElementById("playerSelect").value;
+
+  const record = data.find(r => r.Player === player);
+
+  document.getElementById("output").innerHTML = `
+    <h2>${player}</h2>
+    <p><strong>Squad:</strong> ${record.Squad}</p>
+    <p><strong>Reinforce:</strong> ${record["Reinforce Target"]}</p>
+    <p><strong>Hero:</strong> ${record.Hero}</p>
+    <p><strong>Troops:</strong> ${record.Troops}</p>
+  `;
+}
+</script>
+
+</body>
+</html>
