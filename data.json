@@ -1,63 +1,63 @@
 {
   "players": [
     {
-      "name": "Player 1",
+      "name": "Lady Togy",
       "assignments": [
-        { "hero": "Margot/low stars", "target": "Player 6" },
-        { "hero": "Yeonwoo", "target": "Player 5" },
-        { "hero": "Jabel", "target": "Player 4" },
-        { "hero": "Chenko", "target": "Player 3" },
-        { "hero": "Amane", "target": "Player 2" }
+        { "hero": "Margot/low stars", "target": "KK" },
+        { "hero": "Yeonwoo", "target": "Bondara" },
+        { "hero": "Jabel", "target": "KQ" },
+        { "hero": "Chenko", "target": "Kitty Ona" },
+        { "hero": "Amane", "target": "Stranger" }
       ]
     },
     {
-      "name": "Player 2",
+      "name": "Stranger",
       "assignments": [
-        { "hero": "Margot/low stars", "target": "Player 3" },
-        { "hero": "Yeonwoo", "target": "Player 6" },
-        { "hero": "Jabel", "target": "Player 5" },
-        { "hero": "Chenko", "target": "Player 1" },
-        { "hero": "Amane", "target": "Player 4" }
+        { "hero": "Margot/low stars", "target": "Kitty Ona" },
+        { "hero": "Yeonwoo", "target": "KK" },
+        { "hero": "Jabel", "target": "Bondara" },
+        { "hero": "Chenko", "target": "Lady Togy" },
+        { "hero": "Amane", "target": "KQ" }
       ]
     },
     {
-      "name": "Player 3",
+      "name": "Kitty Ona",
       "assignments": [
-        { "hero": "Margot/low stars", "target": "Player 2" },
-        { "hero": "Yeonwoo", "target": "Player 4" },
-        { "hero": "Jabel", "target": "Player 6" },
-        { "hero": "Chenko", "target": "Player 5" },
-        { "hero": "Amane", "target": "Player 1" }
+        { "hero": "Margot/low stars", "target": "Stranger" },
+        { "hero": "Yeonwoo", "target": "KQ" },
+        { "hero": "Jabel", "target": "KK" },
+        { "hero": "Chenko", "target": "Bondara" },
+        { "hero": "Amane", "target": "Lady Togy" }
       ]
     },
     {
-      "name": "Player 4",
+      "name": "KQ",
       "assignments": [
-        { "hero": "Margot/low stars", "target": "Player 5" },
-        { "hero": "Yeonwoo", "target": "Player 1" },
-        { "hero": "Jabel", "target": "Player 2" },
-        { "hero": "Chenko", "target": "Player 6" },
-        { "hero": "Amane", "target": "Player 3" }
+        { "hero": "Margot/low stars", "target": "Bondara" },
+        { "hero": "Yeonwoo", "target": "Lady Togy" },
+        { "hero": "Jabel", "target": "Stranger" },
+        { "hero": "Chenko", "target": "KK" },
+        { "hero": "Amane", "target": "Kitty Ona" }
       ]
     },
     {
-      "name": "Player 5",
+      "name": "Bondara",
       "assignments": [
-        { "hero": "Margot/low stars", "target": "Player 4" },
-        { "hero": "Yeonwoo", "target": "Player 3" },
-        { "hero": "Jabel", "target": "Player 1" },
-        { "hero": "Chenko", "target": "Player 2" },
-        { "hero": "Amane", "target": "Player 6" }
+        { "hero": "Margot/low stars", "target": "KQ" },
+        { "hero": "Yeonwoo", "target": "Kitty Ona" },
+        { "hero": "Jabel", "target": "Lady Togy" },
+        { "hero": "Chenko", "target": "Stranger" },
+        { "hero": "Amane", "target": "KK" }
       ]
     },
     {
-      "name": "Player 6",
+      "name": "KK",
       "assignments": [
-        { "hero": "Margot/low stars", "target": "Player 1" },
-        { "hero": "Yeonwoo", "target": "Player 2" },
-        { "hero": "Jabel", "target": "Player 3" },
-        { "hero": "Chenko", "target": "Player 4" },
-        { "hero": "Amane", "target": "Player 5" }
+        { "hero": "Margot/low stars", "target": "Lady Togy" },
+        { "hero": "Yeonwoo", "target": "Stranger" },
+        { "hero": "Jabel", "target": "Kitty Ona" },
+        { "hero": "Chenko", "target": "KQ" },
+        { "hero": "Amane", "target": "Bondara" }
       ]
     }
   ]
