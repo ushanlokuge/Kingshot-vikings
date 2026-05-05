@@ -1,1 +1,64 @@
-{ "players": [ { "name": "Lady Togy", "assignments": [ { "hero": "Margot/low stars", "target": "KK" }, { "hero": "Yeonwoo", "target": "LiquidBlack" }, { "hero": "Jabel", "target": "KQ" }, { "hero": "Chenko", "target": "Kitty Ona" }, { "hero": "Amane", "target": "Stranger" }, { "hero": "Saul/Low stars", "target": "Sooki Lala" } ] }, { "name": "KK", "assignments": [ { "hero": "Margot/low stars", "target": "Sooki Lala" }, { "hero": "Yeonwoo", "target": "Lady Togy" }, { "hero": "Jabel", "target": "LiquidBlack" }, { "hero": "Chenko", "target": "KQ" }, { "hero": "Amane", "target": "Kitty Ona" }, { "hero": "Saul/Low stars", "target": "Stranger" } ] }, { "name": "LiquidBlack", "assignments": [ { "hero": "Margot/low stars", "target": "Stranger" }, { "hero": "Yeonwoo", "target": "Sooki Lala" }, { "hero": "Jabel", "target": "KQ" }, { "hero": "Chenko", "target": "Kitty Ona" }, { "hero": "Amane", "target": "Stranger" }, { "hero": "Saul/Low stars", "target": "Sooki Lala" } ] }, { "name": "KQ", "assignments": [ { "hero": "Margot/low stars", "target": "KK" }, { "hero": "Yeonwoo", "target": "LiquidBlack" }, { "hero": "Jabel", "target": "KQ" }, { "hero": "Chenko", "target": "Kitty Ona" }, { "hero": "Amane", "target": "Stranger" }, { "hero": "Saul/Low stars", "target": "Sooki Lala" } ] }, { "name": "LiquidBlack", "assignments": [ { "hero": "Margot/low stars", "target": "KK" }, { "hero": "Yeonwoo", "target": "LiquidBlack" }, { "hero": "Jabel", "target": "KQ" }, { "hero": "Chenko", "target": "Kitty Ona" }, { "hero": "Amane", "target": "Stranger" }, { "hero": "Saul/Low stars", "target": "Sooki Lala" } ] }, { "name": "Sooki Lala", "assignments": [ { "hero": "Margot/low stars", "target": "KK" }, { "hero": "Yeonwoo", "target": "LiquidBlack" }, { "hero": "Jabel", "target": "KQ" }, { "hero": "Chenko", "target": "Kitty Ona" }, { "hero": "Amane", "target": "Stranger" }, { "hero": "Saul/Low stars", "target": "Sooki Lala" } ] }, { "name": "KK", "assignments": [ { "hero": "Margot/low stars", "target": "KK" }, { "hero": "Yeonwoo", "target": "LiquidBlack" }, { "hero": "Jabel", "target": "KQ" }, { "hero": "Chenko", "target": "Kitty Ona" }, { "hero": "Amane", "target": "Stranger" }, { "hero": "Saul/Low stars", "target": "Sooki Lala" } ] } ] }
+{
+  "players": [
+    {
+      "name": "Lady Togy",
+      "assignments": [
+        { "hero": "Margot/low stars", "target": "KK" },
+        { "hero": "Yeonwoo", "target": "Bondara" },
+        { "hero": "Jabel", "target": "KQ" },
+        { "hero": "Chenko", "target": "Kitty Ona" },
+        { "hero": "Amane", "target": "Stranger" }
+      ]
+    },
+    {
+      "name": "Stranger",
+      "assignments": [
+        { "hero": "Margot/low stars", "target": "Kitty Ona" },
+        { "hero": "Yeonwoo", "target": "KK" },
+        { "hero": "Jabel", "target": "Bondara" },
+        { "hero": "Chenko", "target": "Lady Togy" },
+        { "hero": "Amane", "target": "KQ" }
+      ]
+    },
+    {
+      "name": "Kitty Ona",
+      "assignments": [
+        { "hero": "Margot/low stars", "target": "Stranger" },
+        { "hero": "Yeonwoo", "target": "KQ" },
+        { "hero": "Jabel", "target": "KK" },
+        { "hero": "Chenko", "target": "Bondara" },
+        { "hero": "Amane", "target": "Lady Togy" }
+      ]
+    },
+    {
+      "name": "KQ",
+      "assignments": [
+        { "hero": "Margot/low stars", "target": "Bondara" },
+        { "hero": "Yeonwoo", "target": "Lady Togy" },
+        { "hero": "Jabel", "target": "Stranger" },
+        { "hero": "Chenko", "target": "KK" },
+        { "hero": "Amane", "target": "Kitty Ona" }
+      ]
+    },
+    {
+      "name": "Bondara",
+      "assignments": [
+        { "hero": "Margot/low stars", "target": "KQ" },
+        { "hero": "Yeonwoo", "target": "Kitty Ona" },
+        { "hero": "Jabel", "target": "Lady Togy" },
+        { "hero": "Chenko", "target": "Stranger" },
+        { "hero": "Amane", "target": "KK" }
+      ]
+    },
+    {
+      "name": "KK",
+      "assignments": [
+        { "hero": "Margot/low stars", "target": "Lady Togy" },
+        { "hero": "Yeonwoo", "target": "Stranger" },
+        { "hero": "Jabel", "target": "Kitty Ona" },
+        { "hero": "Chenko", "target": "KQ" },
+        { "hero": "Amane", "target": "Bondara" }
+      ]
+    }
+  ]
+}
