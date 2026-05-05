@@ -1,80 +1,233 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Kingshot Viking Planner</title>
+
   <style>
+    * {
+      box-sizing: border-box;
+    }
+
     body {
-      font-family: Arial;
-      background: #111;
+      margin: 0;
+      font-family: Arial, sans-serif;
       color: #fff;
       text-align: center;
+      min-height: 100vh;
+      background:
+        linear-gradient(rgba(10,10,10,0.78), rgba(10,10,10,0.88)),
+        url("https://images.unsplash.com/photo-1518709268805-4e9042af2176?auto=format&fit=crop&w=1600&q=80") center/cover no-repeat fixed;
       padding: 20px;
     }
-    select {
-      padding: 10px;
-      font-size: 16px;
+
+    .container {
+      max-width: 950px;
+      margin: 0 auto;
     }
+
+    h1 {
+      margin: 10px 0 20px;
+      font-size: 2.4rem;
+      letter-spacing: 1px;
+      text-shadow: 0 2px 12px rgba(0, 0, 0, 0.7);
+    }
+
+    .top-bar {
+      display: flex;
+      gap: 12px;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-bottom: 20px;
+    }
+
+    select,
+    button {
+      padding: 12px 16px;
+      font-size: 15px;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+    }
+
+    select {
+      min-width: 240px;
+      background: rgba(255,255,255,0.92);
+      color: #111;
+      font-weight: bold;
+    }
+
+    button {
+      background: #b8860b;
+      color: white;
+      font-weight: bold;
+      transition: 0.2s ease;
+    }
+
+    button:hover {
+      background: #d49d14;
+      transform: translateY(-1px);
+    }
+
     .card {
       margin-top: 20px;
-      padding: 20px;
-      background: #222;
-      border-radius: 10px;
+      padding: 24px;
+      background: rgba(20, 20, 20, 0.82);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 18px;
+      backdrop-filter: blur(6px);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.35);
+    }
+
+    .player-title {
+      font-size: 1.9rem;
+      margin-bottom: 20px;
+      color: #ffd166;
+    }
+
+    .assignment-list {
+      display: grid;
+      gap: 12px;
+    }
+
+    .assignment {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+      padding: 14px 16px;
+      border-radius: 12px;
+      background: rgba(255,255,255,0.06);
+      text-align: left;
+    }
+
+    .hero {
+      font-weight: bold;
+      color: #ffd166;
+    }
+
+    .arrow {
+      opacity: 0.8;
+      font-size: 18px;
+    }
+
+    .target {
+      font-weight: bold;
+      color: #8ecae6;
+    }
+
+    .bg-credit {
+      margin-top: 16px;
+      font-size: 12px;
+      opacity: 0.7;
+    }
+
+    @media (max-width: 700px) {
+      .assignment {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .player-title {
+        font-size: 1.5rem;
+      }
+
+      h1 {
+        font-size: 1.9rem;
+      }
     }
   </style>
 </head>
 
 <body>
+  <div class="container">
+    <h1>⚔️ Kingshot Viking War Dashboard ⚔️</h1>
 
-<h1>⚔️ Viking War Dashboard ⚔️</h1>
+    <div class="top-bar">
+      <select id="playerSelect"></select>
+      <button id="bgBtn">Change Viking Background</button>
+    </div>
 
-<select id="playerSelect"></select>
+    <div id="output" class="card"></div>
+    <div class="bg-credit">Kingshot-ready Viking themed rotating backgrounds</div>
+  </div>
 
-<div id="output" class="card"></div>
+  <script>
+    const sheetURL = "data.json";
 
-<script>
+    let data = [];
 
-const sheetURL = "data.json";
+    // Add as many Viking / battle themed backgrounds as you like
+    const backgrounds = [
+      "https://images.unsplash.com/photo-1518709268805-4e9042af2176?auto=format&fit=crop&w=1600&q=80",
+      "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1600&q=80",
+      "https://images.unsplash.com/photo-1493246507139-91e8fad9978e?auto=format&fit=crop&w=1600&q=80",
+      "https://images.unsplash.com/photo-1473448912268-2022ce9509d8?auto=format&fit=crop&w=1600&q=80",
+      "https://images.unsplash.com/photo-1469474968028-56623f02e42e?auto=format&fit=crop&w=1600&q=80",
+      "https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=1600&q=80"
+    ];
 
-let data = [];
+    let bgIndex = 0;
 
-fetch(sheetURL)
-  .then(res => res.json())
-  .then(json => {
-    data = json.players;
+    function setBackground(index) {
+      document.body.style.background = `
+        linear-gradient(rgba(10,10,10,0.78), rgba(10,10,10,0.88)),
+        url("${backgrounds[index]}") center/cover no-repeat fixed
+      `;
+    }
 
-    const select = document.getElementById("playerSelect");
+    fetch(sheetURL)
+      .then(res => res.json())
+      .then(json => {
+        data = json.players;
 
-    data.forEach(p => {
-      const option = document.createElement("option");
-      option.value = p.name;
-      option.textContent = p.name;
-      select.appendChild(option);
-    });
+        const select = document.getElementById("playerSelect");
 
-    select.addEventListener("change", showPlayer);
+        data.forEach((p, i) => {
+          const option = document.createElement("option");
+          option.value = p.name;
+          option.textContent = p.name;
+          if (i === 0) option.selected = true;
+          select.appendChild(option);
+        });
 
-    showPlayer();
-  });
+        select.addEventListener("change", showPlayer);
 
-function showPlayer() {
-  const playerName = document.getElementById("playerSelect").value;
+        document.getElementById("bgBtn").addEventListener("click", () => {
+          bgIndex = (bgIndex + 1) % backgrounds.length;
+          setBackground(bgIndex);
+        });
 
-  const player = data.find(p => p.name === playerName);
+        setBackground(bgIndex);
+        showPlayer();
+      });
 
-  let html = `<h2>${player.name} 🛡️</h2>`;
+    function showPlayer() {
+      const playerName = document.getElementById("playerSelect").value;
+      const player = data.find(p => p.name === playerName);
 
-  player.assignments.forEach(a => {
-    html += `
-      <p>
-        <strong>${a.hero}</strong> ➝ ${a.target}
-      </p>
-    `;
-  });
+      if (!player) return;
 
-  document.getElementById("output").innerHTML = html;
-}
+      let html = `
+        <div class="player-title">${player.name} 🛡️</div>
+        <div class="assignment-list">
+      `;
 
-</script>
+      player.assignments.forEach(a => {
+        html += `
+          <div class="assignment">
+            <div class="hero">${a.hero}</div>
+            <div class="arrow">➝</div>
+            <div class="target">${a.target}</div>
+          </div>
+        `;
+      });
 
+      html += `</div>`;
+
+      document.getElementById("output").innerHTML = html;
+    }
+  </script>
 </body>
 </html>
