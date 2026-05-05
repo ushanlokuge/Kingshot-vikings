@@ -5,7 +5,7 @@
       "assignments": [
         { "hero": "Margot/low stars", "target": "KK" },
         { "hero": "Yeonwoo", "target": "LiquidBlack" },
-        { "hero": "Jabel", "target": "KQ" },
+        { "hero": "Hilde", "target": "KQ" },
         { "hero": "Chenko", "target": "Kitty Ona" },
         { "hero": "Amane", "target": "Stranger" },
         { "hero": "Saul/Low stars", "target": "Sooki Lala" }
@@ -16,7 +16,7 @@
       "assignments": [
         { "hero": "Margot/low stars", "target": "Sooki Lala" },
         { "hero": "Yeonwoo", "target": "Lady Togy" },
-        { "hero": "Jabel", "target": "LiquidBlack" },
+        { "hero": "Hilde", "target": "LiquidBlack" },
         { "hero": "Chenko", "target": "KQ" },
         { "hero": "Amane", "target": "Kitty Ona" },
         { "hero": "Saul/Low stars", "target": "Stranger" }
@@ -27,7 +27,7 @@
       "assignments": [
         { "hero": "Margot/low stars", "target": "Stranger" },
         { "hero": "Yeonwoo", "target": "Sooki Lala" },
-        { "hero": "Jabel", "target": "Lady Togy" },
+        { "hero": "Hilde", "target": "Lady Togy" },
         { "hero": "Chenko", "target": "KK" },
         { "hero": "Amane", "target": "KQ" },
         { "hero": "Saul/Low stars", "target": "Kitty Ona" }
@@ -38,7 +38,7 @@
       "assignments": [
         { "hero": "Margot/low stars", "target": "Kitty Ona" },
         { "hero": "Yeonwoo", "target": "Stranger" },
-        { "hero": "Jabel", "target": "Sooki Lala" },
+        { "hero": "Alcar/Jabel/Saul", "target": "Sooki Lala" },
         { "hero": "Chenko", "target": "Lady Togy" },
         { "hero": "Amane", "target": "KK" },
         { "hero": "Saul/Low stars", "target": "LiquidBlack" }
@@ -49,7 +49,7 @@
       "assignments": [
         { "hero": "Margot/low stars", "target": "KQ" },
         { "hero": "Yeonwoo", "target": "Stranger" },
-        { "hero": "Jabel", "target": "Sooki Lala" },
+        { "hero": "Hilde", "target": "Sooki Lala" },
         { "hero": "Chenko", "target": "Lady Togy" },
         { "hero": "Amane", "target": "KK" },
         { "hero": "Saul/Low stars", "target": "LiquidBlack" }
@@ -60,7 +60,7 @@
       "assignments": [
         { "hero": "Margot/low stars", "target": "LiquidBlack" },
         { "hero": "Yeonwoo", "target": "KQ" },
-        { "hero": "Jabel", "target": "Kitty Ona" },
+        { "hero": "Hilde", "target": "Kitty Ona" },
         { "hero": "Chenko", "target": "Sooki Lala" },
         { "hero": "Amane", "target": "Lady Togy" },
         { "hero": "Saul/Low stars", "target": "KK" }
@@ -71,9 +71,8 @@
       "assignments": [
         { "hero": "Yeonwoo", "target": "KK" },
         { "hero": "Jabel", "target": "LiquidBlack" },
-        { "hero": "Chenko", "target": "KQ" },
         { "hero": "Amane", "target": "Kitty Ona" },
-        { "hero": "Saul/Low stars", "target": "Stranger" }
+        { "hero": "Hilde", "target": "Stranger" }
       ]
     }
   ]
