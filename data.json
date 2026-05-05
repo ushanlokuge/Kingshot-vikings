@@ -65,16 +65,7 @@
         { "hero": "Amane", "target": "Lady Togy" },
         { "hero": "Saul/Low stars", "target": "KK" }
       ]
-    },
-    {
-      "name": "Sooki Lala",
-      "assignments": [
-        { "hero": "Margot/low stars", "target": "Lady Togy" },
-        { "hero": "Yeonwoo", "target": "KK" },
-        { "hero": "Jabel", "target": "LiquidBlack" },
-        { "hero": "Chenko", "target": "KQ" },
-        { "hero": "Amane", "target": "Kitty Ona" },
-        { "hero": "Saul/Low stars", "target": "Stranger" }
+    }
       ]
     }
   ]
